@@ -1,0 +1,28 @@
+{
+    "appTitle": "Flutter Demo",
+    "homePageTitle": "Flutter Demo Home Page",
+    "settings": "Settings",
+    "currentThemeMode": "Current theme mode: {mode}",
+    "@currentThemeMode": {
+        "placeholders": {
+            "mode": {
+                "type": "String"
+            }
+        }
+    },
+    "settingsDrawerTitle": "Settings",
+    "themeSettings": "Theme Settings",
+    "systemTheme": "System",
+    "lightTheme": "Light",
+    "darkTheme": "Dark",
+    "about": "About",
+    "version": "Version {version}",
+    "@version": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "licenses": "Licenses"
+}

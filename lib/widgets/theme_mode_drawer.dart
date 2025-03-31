@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:todo_20250401/providers/theme_state.dart';
+import 'package:todo_20250401/l10n/app_localizations.dart';
 
 class ThemeModeDrawer extends ConsumerWidget {
   const ThemeModeDrawer({super.key});
@@ -8,6 +9,7 @@ class ThemeModeDrawer extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(themeModeProvider);
+    final l10n = AppLocalizations.of(context)!;
 
     return Drawer(
       child: ListView(
@@ -28,13 +30,13 @@ class ThemeModeDrawer extends ConsumerWidget {
                   size: 48,
                 ),
                 const SizedBox(height: 16),
-                Text('アプリの外観', style: Theme.of(context).textTheme.titleLarge),
+                Text(l10n.themeSettings, style: Theme.of(context).textTheme.titleLarge),
               ],
             ),
           ),
           ListTile(
             leading: const Icon(Icons.brightness_auto),
-            title: const Text('システム設定に従う'),
+            title: Text(l10n.systemTheme),
             selected: themeMode == ThemeMode.system,
             onTap: () {
               ref
@@ -45,7 +47,7 @@ class ThemeModeDrawer extends ConsumerWidget {
           ),
           ListTile(
             leading: const Icon(Icons.brightness_5),
-            title: const Text('ライトモード'),
+            title: Text(l10n.lightTheme),
             selected: themeMode == ThemeMode.light,
             onTap: () {
               ref
@@ -56,7 +58,7 @@ class ThemeModeDrawer extends ConsumerWidget {
           ),
           ListTile(
             leading: const Icon(Icons.brightness_4),
-            title: const Text('ダークモード'),
+            title: Text(l10n.darkTheme),
             selected: themeMode == ThemeMode.dark,
             onTap: () {
               ref.read(themeModeProvider.notifier).setThemeMode(ThemeMode.dark);

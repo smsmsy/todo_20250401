@@ -1,0 +1,28 @@
+{
+    "appTitle": "Flutter デモ",
+    "homePageTitle": "Flutter デモ ホームページ",
+    "settings": "設定",
+    "currentThemeMode": "現在のテーマモード: {mode}",
+    "@currentThemeMode": {
+        "placeholders": {
+            "mode": {
+                "type": "String"
+            }
+        }
+    },
+    "settingsDrawerTitle": "設定",
+    "themeSettings": "テーマ設定",
+    "systemTheme": "システム",
+    "lightTheme": "ライト",
+    "darkTheme": "ダーク",
+    "about": "このアプリについて",
+    "version": "バージョン {version}",
+    "@version": {
+        "placeholders": {
+            "version": {
+                "type": "String"
+            }
+        }
+    },
+    "licenses": "ライセンス"
+}
